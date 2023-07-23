@@ -1,0 +1,15 @@
+version: '3'
+services:
+  fastapi:
+    container_name: iijbootcamp-fastapi
+    image: python:3.11.4-bullseye
+    ports:
+      - "8080:8000"
+    working_dir: /app
+    tty: true
+    volumes:
+      - ./app:/app
+  redis:
+    container_name: iijbootcamp-backend
+    image: "redis:alpine"
+
